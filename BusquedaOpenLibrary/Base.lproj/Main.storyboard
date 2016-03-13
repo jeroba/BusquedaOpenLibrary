@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,7 +30,7 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-Ja-0OS">
-                                <rect key="frame" x="176" y="236" width="249" height="274"/>
+                                <rect key="frame" x="30" y="173" width="540" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -37,13 +38,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="73" id="EP6-xX-6dD"/>
-                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCV-Wu-DTV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Ab-Ja-0OS" secondAttribute="bottom" constant="90" id="5Ze-ID-AlA"/>
+                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="trailing" secondItem="F0N-kz-trZ" secondAttribute="trailing" id="ECM-Sv-Bag"/>
                             <constraint firstItem="F0N-kz-trZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hna-tQ-FJj"/>
-                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="top" secondItem="F0N-kz-trZ" secondAttribute="bottom" constant="73" id="aDp-gH-IvM"/>
-                            <constraint firstItem="F0N-kz-trZ" firstAttribute="leading" secondItem="2Ab-Ja-0OS" secondAttribute="leading" id="mre-2b-8zl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ab-Ja-0OS" secondAttribute="trailing" constant="10" id="Hv6-Mr-whA"/>
+                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="top" secondItem="F0N-kz-trZ" secondAttribute="bottom" constant="73" id="OpO-VN-PBQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Ab-Ja-0OS" secondAttribute="bottom" constant="10" id="Rov-To-vPU"/>
+                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="leading" secondItem="F0N-kz-trZ" secondAttribute="leading" id="WUV-rQ-5wT"/>
+                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ffr-dJ-AGR"/>
+                            <constraint firstItem="2Ab-Ja-0OS" firstAttribute="top" secondItem="F0N-kz-trZ" secondAttribute="bottom" constant="10" id="qZo-5d-5hM"/>
                             <constraint firstItem="F0N-kz-trZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="qmW-A7-HX8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ECM-Sv-Bag"/>
+                                <exclude reference="OpO-VN-PBQ"/>
+                                <exclude reference="WUV-rQ-5wT"/>
+                                <exclude reference="5Ze-ID-AlA"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <action selector="backGroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="zAC-Eg-P7k"/>
                         </connections>

@@ -18,10 +18,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let url = NSURL(string: urls)
         let datos:NSData? = NSData(contentsOfURL: url!)
         if datos == nil{
-            salidaTexto.text = "Error con la conexion a internet."
+            let alert = UIAlertController(title: "Error", message: "La conexión a internet parece estar desactivada.", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
+            alert.addAction(cancelAction)
+            self.presentViewController(alert, animated: true, completion: nil)
         }else{
-            let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)
-            salidaTexto.text = texto! as String
+                let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)
+                salidaTexto.text = texto! as String
         }
     }
     @IBAction func backGroundTap(sender: AnyObject) {
