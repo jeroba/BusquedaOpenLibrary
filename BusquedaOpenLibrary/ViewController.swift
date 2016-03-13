@@ -24,7 +24,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }else{
                 let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)
+            if texto == "{}"{
+                salidaTexto.text = "Libro no encontrado."
+            }else{
                 salidaTexto.text = texto! as String
+            }
         }
     }
     @IBAction func backGroundTap(sender: AnyObject) {
